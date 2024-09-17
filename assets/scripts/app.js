@@ -30,3 +30,35 @@ console.log(10>=10);
 if(10===10){
     console.log("works");
 }
+
+
+//functions and parameters
+function greet(){
+    console.log("hello!");
+}
+
+greet();
+greet();
+greet();
+greet();
+
+function greetUser(userName, message="Hello"){
+    console.log(userName);
+    console.log(message);
+}
+
+greetUser("Max");
+greetUser("Manuel","Hello, what's up");
+
+
+function greetUser2(userName, message="Hello!"){
+    return "Hi, I am " + userName + ". " + message;
+}
+
+const greeting1 = greetUser2("Max");
+console.log(greeting1);
+
+const greeting2= greetUser2("Manuel","Hello, what's up");
+console.log(greeting2);
+
+
