@@ -62,3 +62,13 @@ const greeting2= greetUser2("Manuel","Hello, what's up");
 console.log(greeting2);
 
 
+//arrow functions
+export default function (){
+    console.log('hello anonymous function');
+}
+//omit function word
+
+export default (username, message) => {
+    console.log('Hello arrow');
+    return username + message;
+}
