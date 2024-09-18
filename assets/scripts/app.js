@@ -63,12 +63,44 @@ console.log(greeting2);
 
 
 //arrow functions
-export default function (){
-    console.log('hello anonymous function');
-}
+
+//export default function (){
+  //  console.log('hello anonymous function');
+//}
+
+
 //omit function word
 
 export default (username, message) => {
     console.log('Hello arrow');
     return username + message;
 }
+
+//Object-----------
+const user={
+    name:"max",
+    age:"34",
+    greet(){
+        console.log("Hello!");
+        console.log(this.age);
+    }
+}
+console.log(user.name);
+user.greet();
+
+//object base in a blueprint
+
+class User{
+    constructor(name, age){
+        this.name = name;
+        this.age = age;
+    }
+
+    greet(){
+        console.log("Hi!!");
+    }
+}
+
+const user1 = new User("Manuel", 45);
+console.log(user1);
+user1.greet();
