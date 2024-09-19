@@ -125,3 +125,52 @@ console.log(editedHobbies);
 
 const editedHobbies2 = hobbies.map((item)=> ({text: item}));
 console.log(editedHobbies2);
+
+//------Destructuring---------------
+console.log("********Destructuring********")
+const [firstName, lastName]=["Max","Schwarmuller"];
+//const firstName =userNameData[0];
+//const lastName= userNameData[1];
+
+console.log(firstName);
+console.log(lastName);
+
+const{name: userName, age}={
+    name: "Max2",
+    age:34
+};
+
+//const name= user.name;
+//const age=user.age;
+
+console.log(userName);
+console.log(age);
+
+//Instead of accessing the order properties via the
+// "dot notation" inside the storeOrder function body,
+// you could use destructuring like this:
+function storeOrder({id, currency}) { // destructuring
+    localStorage.setItem('id', id);
+    localStorage.setItem('currency', currency);
+}
+
+storeOrder({id: 5, currency: 'USD', amount: 15.99}); // one argument / value!
+
+//------Spread operator---------------
+console.log("********Spread operator********")
+const hobbies2 = ["Sports","Cooking"];
+const user3={
+    name:"milton",
+    age:"37",
+};
+const newHobbies = ["Reading"];
+const mergedHobbies=[...hobbies2,...newHobbies];
+console.log(mergedHobbies);
+
+//with objects
+const extendedUser ={
+    isAdmin:true,
+    ...user3
+};
+
+console.log(extendedUser);
