@@ -76,7 +76,8 @@ export default (username, message) => {
     return username + message;
 }
 
-//Object-----------
+//-------Objects-----------
+console.log("********Objects********")
 const user={
     name:"max",
     age:"34",
@@ -104,3 +105,23 @@ class User{
 const user1 = new User("Manuel", 45);
 console.log(user1);
 user1.greet();
+
+//------Arrays---------------
+console.log("********Arrays********")
+const hobbies = ["Sports","Cooking","Reading"];
+console.log(hobbies[0]);
+
+hobbies.push("Working");
+console.log(hobbies);
+
+const index= hobbies.findIndex((item)=>{
+    return item === "Sports";
+});
+
+console.log(index);
+
+const editedHobbies= hobbies.map((item)=> item + "!");
+console.log(editedHobbies);
+
+const editedHobbies2 = hobbies.map((item)=> ({text: item}));
+console.log(editedHobbies2);
