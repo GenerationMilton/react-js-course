@@ -192,3 +192,28 @@ const hobbies4 =["sports","Cooking"];
 for(const hobby of hobbies4){
     console.log(hobby);
 }
+
+//------Manipulate DOOM---------------
+const list = document.querySelector("ul");
+list.remove();
+
+//------Using Functions as Values---------------
+function handleTimeout(){
+    console.log("Time out!");
+}
+
+const handleTimeout2 =()=>{
+    console.log("Time out ...again!");
+}
+
+setTimeout(handleTimeout, 2000);
+setTimeout(handleTimeout2, 3000);
+setTimeout(()=>{
+    console.log("More timing out...")
+}, 4000);
+
+//example 2
+function greeter(greetFn){
+    greetFn();
+}
+greeter(()=> console.log("Hi"));
