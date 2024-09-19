@@ -174,3 +174,21 @@ const extendedUser ={
 };
 
 console.log(extendedUser);
+
+//------Control structures---------------
+console.log("*******control structures********");
+
+const password = prompt("your password");
+
+if(password === "Hello"){
+    console.log("Hello works");
+} else if(password === "hello"){
+    console.log("hello works");
+}else {
+    console.log("Access not granted.");
+}
+
+const hobbies4 =["sports","Cooking"];
+for(const hobby of hobbies4){
+    console.log(hobby);
+}
